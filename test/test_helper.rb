@@ -1,4 +1,8 @@
 
 gem 'minitest'
 
-require 'minitest/autorun'
+begin
+  require 'turn/autorun'
+rescue LoadError
+  require 'minitest/autorun'
+end
