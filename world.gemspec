@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9'
   s.required_rubygems_version = ">= 1.3.6"
 
+  s.add_dependency 'i18n'
+
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'minitest'
   s.add_development_dependency 'redcarpet'

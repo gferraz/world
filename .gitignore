@@ -1,6 +1,8 @@
 .DS_Store
 .bundle
-Gemfile.lock
+.yardoc
+doc
 pkg
 tmp
+Gemfile.lock
 
