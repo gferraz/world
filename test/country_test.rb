@@ -13,14 +13,12 @@ class TestCountry < MiniTest::Unit::TestCase
     assert_equal 'Brazil', br.name
   end
 
-
   def test_usa
     us = Country.find('us')
     assert_equal 'US',  us.alpha2
     assert_equal 'USA', us.alpha3
     assert_equal 'United States', us.name
   end
-
 
   def test_zimbabwe
     us = Country.find('ZW')

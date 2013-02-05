@@ -23,6 +23,7 @@ Dependencies
 ------------
 
 * Ruby 1.9.3+
+* I18n gem
 
 To do
 -----

@@ -3,6 +3,7 @@ require 'i18n'
 
 module World
 
+  # ISO 3166 Country
   class Country
 
     # @!attribute [r] alpha2
@@ -13,16 +14,26 @@ module World
     #   @return [String] unofficial country name in English
     attr_reader :alpha2, :alpha3, :name
 
+    alias_method :code, :alpha2
+
     # Finds the country with respective code
     # @param [String] alpha2 ISO 3166-1 two-letter country code
     # @return [Country, nil] Found country or nil if there is none registered with given code.
     # @example
     #   us = Country.find('US')
-    #   br = Country.find('BR')
+    #   us.name #=> 'United States'
     def self.find(alpha2)
-      @countries[code.to_s.upcase]
+      @countries[alpha2.to_s.upcase]
     end
 
+    # Register a new Country.
+    # @param [String] alpha2 ISO 3166-1 two-letter country code
+    # @param [String] alpha3 ISO 3166-1 three-letter country code
+    # @param [String] name Country name
+    # @return [Country] Registered country
+    # @example
+    #   us = Country.find('US')
+    #   us.name #=> 'United States'
     def self.register(alpha2, alpha3, name)
       @countries ||= {}
       @countries[alpha2] = new(alpha2, alpha3, name)

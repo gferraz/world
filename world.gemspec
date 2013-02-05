@@ -9,7 +9,7 @@ require 'world/version'
 Gem::Specification.new do |s|
   s.name        = "world"
   s.homepage    = "http://github.com/gferraz/world"
-  s.summary     = "World Data: Countries, Currencieslibrary (NOT READY FOR USE YET!)"
+  s.summary     = "World Data: Countries, Currencies library (NOT READY FOR USE YET!)"
   s.description = "Provides a small set of classes to Country realated data"
 
   s.version     = World::VERSION

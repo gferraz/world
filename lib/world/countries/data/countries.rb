@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-require 'world/country'
+require 'world/countries/country'
 
 module World
   Country.register('AC', 'ASC', 'Ascension')
