@@ -2,10 +2,8 @@
 require 'i18n'
 
 module World
-
   # ISO 3166 Country
   class Country
-
     # @!attribute [r] alpha2
     #   @return [String] ISO 3166-1 two-letter country code
     # @!attribute [r] alpha3
@@ -40,13 +38,15 @@ module World
     end
 
     def to_s(options = {})
-      I18n.t(@alpha2, default: @name, locale: options[:locale] || I18n.locale, scope: "world.countries")
+      I18n.t(@alpha2, default: @name, locale: options[:locale] || I18n.locale, scope: 'world.countries')
     end
 
     private
 
     def initialize(alpha2, alpha3, name)
-      @alpha2, @alpha3, @name = alpha2, alpha3, name
+      @alpha2 = alpha2
+      @alpha3 = alpha3
+      @name = name
     end
   end
 end

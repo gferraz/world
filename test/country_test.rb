@@ -5,7 +5,6 @@ require 'test_helper'
 require 'world'
 
 class TestCountry < MiniTest::Unit::TestCase
-
   def test_brazil
     br = Country.find('br')
     assert_equal 'BR',     br.alpha2
@@ -38,5 +37,4 @@ class TestCountry < MiniTest::Unit::TestCase
     assert_equal 'Estados Unidos da América', Country.find('US').to_s(locale: 'pt-BR')
     assert_equal 'Zimbábue', Country.find('ZW').to_s(locale: 'pt-BR')
   end
-
 end
